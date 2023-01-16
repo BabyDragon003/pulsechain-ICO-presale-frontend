@@ -1,4 +1,3 @@
-export default function NodeOperator() {
     return (
         <div className="py-20 bg-white" id="node-operator-interest">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

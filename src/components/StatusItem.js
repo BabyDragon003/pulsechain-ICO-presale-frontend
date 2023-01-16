@@ -1,4 +1,3 @@
-import { global } from "../config/global";
 import { formatNumber } from "../utils/utils";
 
 export default function StatusItem(props) {
