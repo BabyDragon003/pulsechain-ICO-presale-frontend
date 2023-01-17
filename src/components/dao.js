@@ -1,3 +1,4 @@
+export default function Dao() {
     return (
         <div id="dao">
             <div className="bg-white">
