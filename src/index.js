@@ -8,17 +8,6 @@ import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 import { global } from "./config/global";
-import { staticConfig } from "./components/static";
-
-const WalletTheme = {
-  colors: {
-    modalBackground: 'linear-gradient(to right, #4250b5, #8b2eb0, #e15897)',
-    modalText: 'white'
-  },
-}
-
-const WalletAvatar = () => {
-  return <img
     src={global.PROJECT_TOKEN.logo}
     alt="avatar"
     width={128}
