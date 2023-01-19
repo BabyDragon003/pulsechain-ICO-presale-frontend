@@ -13,22 +13,6 @@ export default function Community() {
                         className="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent leading-8"
                     >
                         Community
-                    </h2>
-                    <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-50 sm:mt-4">
-                        Our fantastic community would love to answer any questions you
-                        have.
-                    </p>
-                </div>
-                <div
-                    className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-5 lg:max-w-none"
-                >
-                    <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                        <div className="flex-shrink-0">
-                            <div className="bg-gray-800">
-                                <svg
-                                    className="svg-inline--fa fa-discord fa-8x h-48 w-48 mx-auto p-4 text-white block"
-                                    aria-hidden="true"
-                                    focusable="false"
                                     data-prefix="fab"
                                     data-icon="discord"
                                     role="img"
