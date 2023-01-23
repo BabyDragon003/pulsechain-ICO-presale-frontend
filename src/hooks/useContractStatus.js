@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ContractABI from "../assets/abi/ico.json"
 import { useAccount } from "wagmi";
 import { multicall, fetchBalance } from '@wagmi/core'

@@ -1,4 +1,3 @@
-export default function HowItWorks() {
     return (
         <div className="py-20 bg-white" id="how-it-works">
             <div className="p-2 md:p-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

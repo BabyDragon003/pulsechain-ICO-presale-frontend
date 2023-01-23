@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ContractABI from "../assets/abi/ico.json"
 import { multicall } from '@wagmi/core'
 import { global } from "../config/global";

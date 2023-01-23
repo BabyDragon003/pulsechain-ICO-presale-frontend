@@ -1,4 +1,3 @@
-import { global } from "../config/global";
 import BuyItem from "./BuyItem";
 import { useEffect, useState } from "react";
 import { displayRemainTime, ICO_BEFORE, ICO_NOW, ICO_AFTER } from "../utils/utils";
@@ -18,6 +17,27 @@ export default function BuyCard(props) {
     const [timer, setTimer] = useState(0)
 
     useEffect(() => {
+        const timerID = setInterval(() => {
+            const now = Math.round(Date.now() / 1000);
+            const _time = props.nextRoundStartTime - now;
+            if (_time > 0) setTimer(_time)
+        }, 1000);
+
+        return () => {
+            clearInterval(timerID);
+        };
+        // eslint-disable-next-line
+    }, [props.nextRoundStartTime]);
+
+    useEffect(() => {
+        if (props.totalSoldAmount >= global.totalVolume) {
+            setIcoStatusTitle(`We hit the softcap!`)
+            setIcoStatusDetail(`Let's go to the moon with ${global.PROJECT_TOKEN.name} now!`)
+        } else if (props.roundNumber < 1) {
+            setIcoStatusTitle(`Presale is not started yet!`)
+            setIcoStatusDetail(`Round 1 will start in ${displayRemainTime(timer)}.`)
+        } else if (props.roundNumber < 25) {
+            setIcoStatusTitle(`Now is Round ${props.roundNumber}. Please Buy!`)
             setIcoStatusDetail(`Next Round will start in ${displayRemainTime(timer)}.`)
         } else {
             setIcoStatusTitle(`The Last Round is ended!`)

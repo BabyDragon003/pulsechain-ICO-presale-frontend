@@ -1,4 +1,3 @@
-import { formatUnits } from "viem";
 import { global } from "../config/global";
 import { formatNumber } from "../utils/utils";
 
@@ -18,6 +17,27 @@ export default function TokenSelectModal(props) {
                         </button>
                     </div>
                     <div className="p-2 space-y-2">
+                        <div className="w-full bg-gray-300/[0.2] gap-2 flex flex-col">
+                            {
+                                props && props.payTokenBalance && global.TOKENS.map((value, index) => {
+                                    return (
+                                        <button
+                                            key={index}
+                                            data-modal-hide="default-modal"
+                                            className="w-full bg-gray-200/[0.1] gap-1 px-2 py-1 flex flex-row justify-between text-center items-center"
+                                            type="button"
+                                            onClick={() => {
+                                                props.setToken({
+                                                    ...value,
+                                                    index,
+                                                    payTokenBalance: props.payTokenBalance[index]?.status === "success" ?
+                                                        parseFloat(formatUnits(props.payTokenBalance[index].result, value.decimals)) : 0,
+                                                    payTokenAllowance: props.payTokenAllowance[index]?.status === "success" ?
+                                                        parseFloat(formatUnits(props.payTokenAllowance[index].result, value.decimals)) : 0
+                                                })
+                                            }}
+                                        >
+                                            <div className="w-full gap-1 px-2 py-1 flex flex-row justify-start text-center items-center" type="button">
                                                 <img src={value.logo} width={35} height={35} alt='token' />
                                                 <label className="">{value.name}</label>
                                             </div>
