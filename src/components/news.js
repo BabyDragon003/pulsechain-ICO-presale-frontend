@@ -1,3 +1,4 @@
+export default function News() {
     return (
         <div className="bg-white py-16 sm:py-24" id="news">
             <div className="relative sm:py-16">

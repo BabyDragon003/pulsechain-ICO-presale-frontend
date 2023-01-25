@@ -1,3 +1,4 @@
+export default function Security() {
     return (
         <div
             className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 security overflow-hidden"
@@ -7,17 +8,6 @@
             <div className="bg-clouds-bottom"></div>
             <div className="bg-clouds-top"></div>
             <div className="p-2 md:p-0 relative max-w-7xl mx-auto">
-                <div className="text-center">
-                    <h2
-                        className="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent leading-8"
-                    >
-                        Security
-                    </h2>
-                    <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-50 sm:mt-4">
-                        Our smart contracts have been audited by the best in the
-                        business.
-                    </p>
-                </div>
                 <div
                     className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 lg:max-w-none"
                 >
