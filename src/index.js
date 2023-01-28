@@ -18,6 +18,27 @@ const WalletTheme = {
 }
 
 const WalletAvatar = () => {
+  return <img
+    src={global.PROJECT_TOKEN.logo}
+    alt="avatar"
+    width={128}
+    height={128}
+    style={{ borderRadius: 999 }}
+  />;
+};
+
+const { chains, publicClient, webSocketPublicClient } = configureChains(
+  [
+    global.chain,
+  ],
+  [publicProvider()]
+);
+
+const { connectors } = getDefaultWallets({
+  appName: staticConfig.PROJECT,
+  projectId: staticConfig.PROJECT_ID,
+  chains,
+});
 
 const wagmiConfig = createConfig({
   autoConnect: true,
