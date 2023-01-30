@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useAccount, useNetwork } from "wagmi";
 import Status from "../../components/Status";
