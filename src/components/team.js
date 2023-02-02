@@ -3,26 +3,16 @@ export default function Team() {
         <div
             className="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 team overflow-hidden"
             id="team"
+        >
+            <div className="bg-fx"></div>
+            <div className="bg-clouds-bottom"></div>
+            <div className="bg-clouds-top"></div>
+            <div
+                className="relative max-w-7xl text-center sm:text-left mx-auto py-12 px-4 sm:px-6 lg:px-8 lg:py-24 z-20"
             >
                 <div className="space-y-12">
                     <div className="text-center">
                         <h2
-                            className="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-300 via-yellow-300 to-red-400 bg-clip-text text-transparent leading-8"
-                        >
-                            Our Team
-                        </h2>
-                        <p
-                            className="mt-3 max-w-2xl mx-auto text-xl text-gray-100 sm:mt-4"
-                        >
-                            Our hard-working and very experienced team.
-                        </p>
-                    </div>
-                    <ul
-                        // role="list"
-                        className="mx-auto space-y-16 sm:space-y-0 lg:max-w-4xl"
-                    >
-                        <li>
-                            <div className="space-y-6 sm:flex py-8">
                                 <div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                     <img alt="img"
                                         className="h-30 w-30 mx-auto"
