@@ -13,26 +13,16 @@ export function useContractStatus(refresh) {
         currentTokenPrice: 0,
         plsAmountFor1USD: 0,
         nextRoundStartTime: 0,
+        tokenBuyAmount: 0,
+        projectTokenBalance: 0,
+        payTokenBalance: [],
+        payTokenAllowance: [],
+        ethBalance: 0,
+    })
+    const { address } = useAccount();
 
-        return () => {
-            clearInterval(timerID);
-        };
-        // eslint-disable-next-line
-    }, []);
+    const [refetch, setRefetch] = useState(false)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const contract = global.CONTRACTS.Main;
-
-                const contracts = [
-                    {
-                        address: contract,
-                        abi: ContractABI,
-                        functionName: 'totalSoldAmount',
-                    },
-                    {
-                        address: contract,
                         abi: ContractABI,
                         functionName: 'totalFundsInUSD',
                     },
