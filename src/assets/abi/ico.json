@@ -3,25 +3,15 @@
 		"inputs": [
 			{
 				"internalType": "address",
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "account",
+				"name": "target",
 				"type": "address"
 			}
 		],
-		"name": "AddressInsufficientBalance",
+		"name": "AddressEmptyCode",
 		"type": "error"
 	},
 	{
 		"inputs": [
-			{
-				"internalType": "address",
-				"name": "paymentToken",
-				"type": "address"
-			},
 			{
 				"internalType": "uint256",
 				"name": "payAmount",

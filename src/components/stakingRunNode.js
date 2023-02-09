@@ -3,26 +3,16 @@ export default function StakingRunNode() {
         <div className="bg-staking" id="stake-run-node">
             <div
                 className="p-2 md:p-0 max-w-7xl mx-auto bg-white pt-20 bg-staking relative grid gap-5 lg:grid-cols-2"
+            >
+                <div
+                    className="py-16 px-4 sm:px-6 lg:py-10 lg:px-10 bg-gray-100 shadow rounded overflow-hidden"
+                >
+                    <div className="max-w-3xl mx-auto text-center pb-10">
+                        <div className="flex justify-center">
                             <img alt="img"
                                 src={"https://rocketpool.net/assets/services-panel-node-bab61c83.webp"}
                             />
                         </div>
-                        <h2
-                            className="py-10 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
-                        >
-                            Stake + Run Node
-                        </h2>
-                    </div>
-                    <dl
-                        className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 h-auto lg:h-80"
-                    >
-                        <div>
-                            <dt>
-                                <div className="flex justify-center">
-                                    <div
-                                        className="flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-b from-red-500 to-yellow-400 text-white"
-                                    >
-                                        <svg
                                             className="svg-inline--fa fa-network-wired fa-3x h-10 w-10"
                                             aria-hidden="true"
                                             focusable="false"
