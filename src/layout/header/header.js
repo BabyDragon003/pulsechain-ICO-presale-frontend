@@ -1,3 +1,4 @@
+export default function Header() {
     return (
         <>
             <a href="https://rocketpool.net/#header" className="hidden" id="#header">Header</a>
