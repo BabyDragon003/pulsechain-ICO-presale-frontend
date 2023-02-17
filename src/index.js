@@ -8,26 +8,16 @@ import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 import { global } from "./config/global";
-    src={global.PROJECT_TOKEN.logo}
-    alt="avatar"
-    width={128}
-    height={128}
-    style={{ borderRadius: 999 }}
-  />;
-};
+import { staticConfig } from "./components/static";
 
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [
-    global.chain,
-  ],
-  [publicProvider()]
-);
+const WalletTheme = {
+  colors: {
+    modalBackground: 'linear-gradient(to right, #4250b5, #8b2eb0, #e15897)',
+    modalText: 'white'
+  },
+}
 
-const { connectors } = getDefaultWallets({
-  appName: staticConfig.PROJECT,
-  projectId: staticConfig.PROJECT_ID,
-  chains,
-});
+const WalletAvatar = () => {
 
 const wagmiConfig = createConfig({
   autoConnect: true,
