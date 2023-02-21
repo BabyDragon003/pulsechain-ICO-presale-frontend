@@ -1,13 +1,8 @@
+export default function StakingRunNode() {
     return (
         <div className="bg-staking" id="stake-run-node">
             <div
                 className="p-2 md:p-0 max-w-7xl mx-auto bg-white pt-20 bg-staking relative grid gap-5 lg:grid-cols-2"
-            >
-                <div
-                    className="py-16 px-4 sm:px-6 lg:py-10 lg:px-10 bg-gray-100 shadow rounded overflow-hidden"
-                >
-                    <div className="max-w-3xl mx-auto text-center pb-10">
-                        <div className="flex justify-center">
                             <img alt="img"
                                 src={"https://rocketpool.net/assets/services-panel-node-bab61c83.webp"}
                             />
