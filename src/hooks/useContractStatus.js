@@ -8,6 +8,17 @@ import { formatUnits } from "viem";
 export function useContractStatus(refresh) {
     const [data, setData] = useState({
         totalSoldAmount: 0,
+        totalFundsInUSD: 0,
+        roundNumber: 0,
+        currentTokenPrice: 0,
+        plsAmountFor1USD: 0,
+        nextRoundStartTime: 0,
+        tokenBuyAmount: 0,
+        projectTokenBalance: 0,
+        payTokenBalance: [],
+        payTokenAllowance: [],
+        ethBalance: 0,
+    })
     const { address } = useAccount();
 
     const [refetch, setRefetch] = useState(false)

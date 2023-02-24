@@ -8,26 +8,16 @@ export default function BuyCard(props) {
     const [icoStatusTitle, setIcoStatusTitle] = useState(``)
     const [icoStatusDetail, setIcoStatusDetail] = useState(``)
 
-            const now = Math.round(Date.now() / 1000);
-            const _time = props.nextRoundStartTime - now;
-            if (_time > 0) setTimer(_time)
-        }, 1000);
+    useEffect(() => {
+        if (props.totalSoldAmount >= global.totalVolume) setIcoStatus(ICO_AFTER)
+        else if (props.roundNumber < 1) setIcoStatus(ICO_BEFORE)
+        else if (props.roundNumber < 25) setIcoStatus(ICO_NOW)
+        else setIcoStatus(ICO_AFTER)
+    }, [props.roundNumber, props.totalSoldAmount])
 
-        return () => {
-            clearInterval(timerID);
-        };
-        // eslint-disable-next-line
-    }, [props.nextRoundStartTime]);
+    const [timer, setTimer] = useState(0)
 
     useEffect(() => {
-        if (props.totalSoldAmount >= global.totalVolume) {
-            setIcoStatusTitle(`We hit the softcap!`)
-            setIcoStatusDetail(`Let's go to the moon with ${global.PROJECT_TOKEN.name} now!`)
-        } else if (props.roundNumber < 1) {
-            setIcoStatusTitle(`Presale is not started yet!`)
-            setIcoStatusDetail(`Round 1 will start in ${displayRemainTime(timer)}.`)
-        } else if (props.roundNumber < 25) {
-            setIcoStatusTitle(`Now is Round ${props.roundNumber}. Please Buy!`)
             setIcoStatusDetail(`Next Round will start in ${displayRemainTime(timer)}.`)
         } else {
             setIcoStatusTitle(`The Last Round is ended!`)
