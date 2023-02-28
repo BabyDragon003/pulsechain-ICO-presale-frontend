@@ -3,12 +3,6 @@ import ContractABI from "../assets/abi/ico.json"
 import { useAccount } from "wagmi";
 import { multicall, fetchBalance } from '@wagmi/core'
 import { global } from "../config/global";
-import { formatUnits } from "viem";
-
-export function useContractStatus(refresh) {
-    const [data, setData] = useState({
-        totalSoldAmount: 0,
-        totalFundsInUSD: 0,
         roundNumber: 0,
         currentTokenPrice: 0,
         plsAmountFor1USD: 0,
@@ -23,6 +17,32 @@ export function useContractStatus(refresh) {
 
     const [refetch, setRefetch] = useState(false)
 
+    useEffect(() => {
+        const timerID = setInterval(() => {
+            setRefetch((prevData) => {
+                return !prevData;
+            })
+        }, global.REFETCH_INTERVAL);
+
+        return () => {
+            clearInterval(timerID);
+        };
+        // eslint-disable-next-line
+    }, []);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const contract = global.CONTRACTS.Main;
+
+                const contracts = [
+                    {
+                        address: contract,
+                        abi: ContractABI,
+                        functionName: 'totalSoldAmount',
+                    },
+                    {
+                        address: contract,
                         abi: ContractABI,
                         functionName: 'totalFundsInUSD',
                     },
