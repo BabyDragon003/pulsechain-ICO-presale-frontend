@@ -13,22 +13,6 @@ export default function Team() {
                 <div className="space-y-12">
                     <div className="text-center">
                         <h2
-                            className="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-300 via-yellow-300 to-red-400 bg-clip-text text-transparent leading-8"
-                        >
-                            Our Team
-                        </h2>
-                        <p
-                            className="mt-3 max-w-2xl mx-auto text-xl text-gray-100 sm:mt-4"
-                        >
-                            Our hard-working and very experienced team.
-                        </p>
-                    </div>
-                    <ul
-                        // role="list"
-                        className="mx-auto space-y-16 sm:space-y-0 lg:max-w-4xl"
-                    >
-                        <li>
-                            <div className="space-y-6 sm:flex py-8">
                                 <div className="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
                                     <img alt="img"
                                         className="h-30 w-30 mx-auto"
