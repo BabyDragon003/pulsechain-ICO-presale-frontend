@@ -8,11 +8,3 @@ export default function Status(props) {
                 totalFundsInUSD={props.totalFundsInUSD}
                 roundNumber={props.roundNumber}
                 currentTokenPrice={props.currentTokenPrice}
-                tokenBuyAmount={props.tokenBuyAmount}
-                plsAmountFor1USD={props.plsAmountFor1USD}
-                projectTokenBalance={props.projectTokenBalance}
-                nextRoundStartTime={props.nextRoundStartTime}
-            />
-        </div>
-    );
-}
