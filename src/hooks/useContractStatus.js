@@ -13,6 +13,22 @@ export function useContractStatus(refresh) {
         currentTokenPrice: 0,
         plsAmountFor1USD: 0,
         nextRoundStartTime: 0,
+        tokenBuyAmount: 0,
+        projectTokenBalance: 0,
+        payTokenBalance: [],
+        payTokenAllowance: [],
+        ethBalance: 0,
+    })
+    const { address } = useAccount();
+
+    const [refetch, setRefetch] = useState(false)
+
+    useEffect(() => {
+        const timerID = setInterval(() => {
+            setRefetch((prevData) => {
+                return !prevData;
+            })
+        }, global.REFETCH_INTERVAL);
 
         return () => {
             clearInterval(timerID);
