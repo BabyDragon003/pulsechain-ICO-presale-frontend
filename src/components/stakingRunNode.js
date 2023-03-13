@@ -1,4 +1,3 @@
-export default function StakingRunNode() {
     return (
         <div className="bg-staking" id="stake-run-node">
             <div
