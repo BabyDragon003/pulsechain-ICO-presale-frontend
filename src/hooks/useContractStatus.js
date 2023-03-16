@@ -8,16 +8,11 @@ import { formatUnits } from "viem";
 export function useContractStatus(refresh) {
     const [data, setData] = useState({
         totalSoldAmount: 0,
-    const { address } = useAccount();
-
-    const [refetch, setRefetch] = useState(false)
-
-    useEffect(() => {
-        const timerID = setInterval(() => {
-            setRefetch((prevData) => {
-                return !prevData;
-            })
-        }, global.REFETCH_INTERVAL);
+        totalFundsInUSD: 0,
+        roundNumber: 0,
+        currentTokenPrice: 0,
+        plsAmountFor1USD: 0,
+        nextRoundStartTime: 0,
 
         return () => {
             clearInterval(timerID);
