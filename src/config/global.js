@@ -1,13 +1,8 @@
+import { pulsechain, pulsechainV4 } from "wagmi/chains";
 import rpls_ic from "../assets/img/rpls.png"
 import pls_ic from "../assets/img/pulse.png"
 import dai_ic from "../assets/img/dai.png"
 import usdc_ic from "../assets/img/usdc.png"
-import usdt_ic from "../assets/img/usdt.svg"
-
-export const IS_PRODUCT_MODE = false // TODO
-
-export const contracts_mainnet = { // TODO Pulsechain Mainnet
-    Main: "0xC8d994df027105d8e245659B2934d534F34b18CE",
 };
 
 export const contracts_testnet = { // TODO V4Pulsechain Testnet
