@@ -23,32 +23,6 @@ export default function HowItWorks() {
                             <dt>
                                 <div
                                     className="absolute flex items-center justify-center h-20 w-20 rounded-full border-2 border-yellow-200 text-red-500"
-                                >
-                                    <svg
-                                        className="svg-inline--fa fa-ethereum fa-3x h-10 w-10"
-                                        aria-hidden="true"
-                                        focusable="false"
-                                        data-prefix="fab"
-                                        data-icon="ethereum"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 320 512"
-                                    >
-                                        <path
-                                            className=""
-                                            fill="currentColor"
-                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <p
-                                    className="ml-24 text-lg leading-6 font-semibold text-gray-900"
-                                >
-                                    Liquid Staking
-                                </p>
-                            </dt>
-                            <dd className="mt-2 ml-24 text-base text-gray-500">
-                                Innovative liquid staking token that accrues while using
                                 an increasing exchange rate, rather than rebasing which is
                                 better for DeFi and better for tax reporting.
                             </dd>

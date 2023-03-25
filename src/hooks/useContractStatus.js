@@ -23,32 +23,6 @@ export function useContractStatus(refresh) {
 
     const [refetch, setRefetch] = useState(false)
 
-    useEffect(() => {
-        const timerID = setInterval(() => {
-            setRefetch((prevData) => {
-                return !prevData;
-            })
-        }, global.REFETCH_INTERVAL);
-
-        return () => {
-            clearInterval(timerID);
-        };
-        // eslint-disable-next-line
-    }, []);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const contract = global.CONTRACTS.Main;
-
-                const contracts = [
-                    {
-                        address: contract,
-                        abi: ContractABI,
-                        functionName: 'totalSoldAmount',
-                    },
-                    {
-                        address: contract,
                         abi: ContractABI,
                         functionName: 'totalFundsInUSD',
                     },
