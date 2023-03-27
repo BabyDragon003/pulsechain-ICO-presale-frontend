@@ -1,4 +1,3 @@
-import { formatUnits } from "viem";
 import { global } from "../config/global";
 import { formatNumber } from "../utils/utils";
 
