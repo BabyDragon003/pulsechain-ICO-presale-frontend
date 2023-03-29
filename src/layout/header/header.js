@@ -1,3 +1,4 @@
+export default function Header() {
     return (
         <>
             <a href="https://rocketpool.net/#header" className="hidden" id="#header">Header</a>
@@ -7,17 +8,6 @@
                 id="#stake-run-node"
             >stake-run-node</a>
             <a
-                href="https://rocketpool.net/#security"
-                className="hidden"
-                id="#security"
-            >Security</a>
-            <a
-                href="https://rocketpool.net/#how-it-works"
-                className="hidden"
-                id="#how-it-works"
-            >How it works</a>
-            <a
-                href="https://rocketpool.net/#community"
                 className="hidden"
                 id="#community"
             >Community</a>

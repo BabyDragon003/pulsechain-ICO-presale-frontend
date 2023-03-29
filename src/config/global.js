@@ -1,3 +1,4 @@
+import { pulsechain, pulsechainV4 } from "wagmi/chains";
 import rpls_ic from "../assets/img/rpls.png"
 import pls_ic from "../assets/img/pulse.png"
 import dai_ic from "../assets/img/dai.png"

@@ -1,3 +1,4 @@
+import { global } from "../config/global";
 import BuyItem from "./BuyItem";
 import { useEffect, useState } from "react";
 import { displayRemainTime, ICO_BEFORE, ICO_NOW, ICO_AFTER } from "../utils/utils";
@@ -7,17 +8,6 @@ export default function BuyCard(props) {
     const [icoStatusTitle, setIcoStatusTitle] = useState(``)
     const [icoStatusDetail, setIcoStatusDetail] = useState(``)
 
-    useEffect(() => {
-        if (props.totalSoldAmount >= global.totalVolume) setIcoStatus(ICO_AFTER)
-        else if (props.roundNumber < 1) setIcoStatus(ICO_BEFORE)
-        else if (props.roundNumber < 25) setIcoStatus(ICO_NOW)
-        else setIcoStatus(ICO_AFTER)
-    }, [props.roundNumber, props.totalSoldAmount])
-
-    const [timer, setTimer] = useState(0)
-
-    useEffect(() => {
-        const timerID = setInterval(() => {
             const now = Math.round(Date.now() / 1000);
             const _time = props.nextRoundStartTime - now;
             if (_time > 0) setTimer(_time)
