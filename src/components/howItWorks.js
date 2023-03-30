@@ -8,16 +8,11 @@ export default function HowItWorks() {
                     >
                         How does Rocket Pool work?
                     </h2>
-                        <div className="relative">
-                            <dt>
-                                <div
-                                    className="absolute flex items-center justify-center h-20 w-20 rounded-full border-2 border-yellow-200 text-red-500"
-                                >
-                                    <svg
-                                        className="svg-inline--fa fa-ethereum fa-3x h-10 w-10"
-                                        aria-hidden="true"
-                                        focusable="false"
-                                        data-prefix="fab"
+                    <p
+                        className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto font-semibold"
+                    >
+                        Rocket Pool is the first truly decentralised Ethereum staking
+                        pool.
                                         data-icon="ethereum"
                                         role="img"
                                         xmlns="http://www.w3.org/2000/svg"
