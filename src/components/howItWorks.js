@@ -13,26 +13,16 @@ export default function HowItWorks() {
                     >
                         Rocket Pool is the first truly decentralised Ethereum staking
                         pool.
-                                        data-icon="ethereum"
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 320 512"
-                                    >
-                                        <path
-                                            className=""
-                                            fill="currentColor"
-                                            d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <p
-                                    className="ml-24 text-lg leading-6 font-semibold text-gray-900"
-                                >
-                                    Liquid Staking
-                                </p>
-                            </dt>
-                            <dd className="mt-2 ml-24 text-base text-gray-500">
-                                Innovative liquid staking token that accrues while using
+                    </p>
+                </div>
+                <div className="mt-10">
+                    <dl
+                        className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+                    >
+                        <div className="relative">
+                            <dt>
+                                <div
+                                    className="absolute flex items-center justify-center h-20 w-20 rounded-full border-2 border-yellow-200 text-red-500"
                                 an increasing exchange rate, rather than rebasing which is
                                 better for DeFi and better for tax reporting.
                             </dd>

@@ -23,32 +23,6 @@ export default function BuyCard(props) {
             const _time = props.nextRoundStartTime - now;
             if (_time > 0) setTimer(_time)
         }, 1000);
-
-        return () => {
-            clearInterval(timerID);
-        };
-        // eslint-disable-next-line
-    }, [props.nextRoundStartTime]);
-
-    useEffect(() => {
-        if (props.totalSoldAmount >= global.totalVolume) {
-            setIcoStatusTitle(`We hit the softcap!`)
-            setIcoStatusDetail(`Let's go to the moon with ${global.PROJECT_TOKEN.name} now!`)
-        } else if (props.roundNumber < 1) {
-            setIcoStatusTitle(`Presale is not started yet!`)
-            setIcoStatusDetail(`Round 1 will start in ${displayRemainTime(timer)}.`)
-        } else if (props.roundNumber < 25) {
-            setIcoStatusTitle(`Now is Round ${props.roundNumber}. Please Buy!`)
-            setIcoStatusDetail(`Next Round will start in ${displayRemainTime(timer)}.`)
-        } else {
-            setIcoStatusTitle(`The Last Round is ended!`)
-            setIcoStatusDetail(`You can still buy! Let's go to the moon with ${global.PROJECT_TOKEN.name} now!`)
-        }
-    }, [timer, props.roundNumber, props.totalSoldAmount])
-
-
-    return (
-        <div className="w-full lg:w-[600px] flex flex-col items-center justify-center text-center px-2 pb-[100px]">
             <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 w-full lg:w-11/12 py-2 bg-gray-200/[0.1] flex flex-col justify-center text-center px-2 my-3">
                 <div className="flex flex-col items-center">
                     <label className="text-3xl sm:text-4xl font-bold block bg-gradient-to-r from-pink-100 via-yellow-300 to-yellow-200 bg-clip-text text-transparent">

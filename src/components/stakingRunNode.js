@@ -13,6 +13,22 @@ export default function StakingRunNode() {
                                 src={"https://rocketpool.net/assets/services-panel-node-bab61c83.webp"}
                             />
                         </div>
+                        <h2
+                            className="py-10 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                        >
+                            Stake + Run Node
+                        </h2>
+                    </div>
+                    <dl
+                        className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 h-auto lg:h-80"
+                    >
+                        <div>
+                            <dt>
+                                <div className="flex justify-center">
+                                    <div
+                                        className="flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-b from-red-500 to-yellow-400 text-white"
+                                    >
+                                        <svg
                                             className="svg-inline--fa fa-network-wired fa-3x h-10 w-10"
                                             aria-hidden="true"
                                             focusable="false"
