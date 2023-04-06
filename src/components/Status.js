@@ -1,3 +1,4 @@
+import StatusItem from "./StatusItem";
 
 export default function Status(props) {
     return (

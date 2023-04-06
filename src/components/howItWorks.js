@@ -1,3 +1,4 @@
+export default function HowItWorks() {
     return (
         <div className="py-20 bg-white" id="how-it-works">
             <div className="p-2 md:p-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,22 +13,6 @@
                     >
                         Rocket Pool is the first truly decentralised Ethereum staking
                         pool.
-                    </p>
-                </div>
-                <div className="mt-10">
-                    <dl
-                        className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
-                    >
-                        <div className="relative">
-                            <dt>
-                                <div
-                                    className="absolute flex items-center justify-center h-20 w-20 rounded-full border-2 border-yellow-200 text-red-500"
-                                >
-                                    <svg
-                                        className="svg-inline--fa fa-ethereum fa-3x h-10 w-10"
-                                        aria-hidden="true"
-                                        focusable="false"
-                                        data-prefix="fab"
                                         data-icon="ethereum"
                                         role="img"
                                         xmlns="http://www.w3.org/2000/svg"

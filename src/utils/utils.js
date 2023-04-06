@@ -1,3 +1,4 @@
+import { global } from "../config/global";
 
 export const trimAddress = (addr) => {
     return `${addr.substring(0, 7)}...${addr.substring(addr.length - 5)}`;
@@ -12,22 +13,6 @@ export function formatNumber(num) {
         return (num / 1e6).toFixed(2) + 'M';
     } else if (num >= 1e3) {
         return (num / 1e3).toFixed(2) + 'K';
-    } else {
-        return num.toFixed(2);
-    }
-}
-
-export const displayRemainTime = (seconds) => {
-    // console.log('dRT: ', seconds)
-    if (seconds > 0) {
-        // Calculating the days, hours, minutes and seconds left
-        const timeDays = Math.floor(seconds / (60 * 60 * 24))
-        const timeHours = Math.floor((seconds % (60 * 60 * 24)) / (60 * 60))
-        const timeMinutes = Math.floor((seconds % (60 * 60)) / 60)
-        const timeSeconds = Math.floor(seconds % 60)
-
-        if (timeDays > 0) {
-            return `${timeDays}D ${timeHours}H ${timeMinutes}M ${timeSeconds}S`
         } else if (timeHours > 0) {
             return `${timeHours}H ${timeMinutes}M ${timeSeconds}S`
         } else if (timeMinutes > 0) {

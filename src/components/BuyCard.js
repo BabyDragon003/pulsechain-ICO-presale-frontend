@@ -1,3 +1,4 @@
+import { global } from "../config/global";
 import BuyItem from "./BuyItem";
 import { useEffect, useState } from "react";
 import { displayRemainTime, ICO_BEFORE, ICO_NOW, ICO_AFTER } from "../utils/utils";
