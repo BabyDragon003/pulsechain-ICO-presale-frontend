@@ -18,27 +18,6 @@ export default function Dao() {
                             infrastructure and industry.
                         </p>
                     </div>
-                    <div
-                        className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8"
-                    >
-                        <div
-                            className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8"
-                        >
-                            <div
-                                className="col-span-1 flex flex-col justify-center py-8 px-8 bg-gray-50"
-                            >
-                                <a
-                                    href="https://lighthouse.sigmaprime.io/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                ><img
-                                        className="max-h-24 m-auto"
-                                        src="https://rocketpool.net/assets/lighthouse-390461e4.webp"
-                                        alt="Lighthouse ETH2 Client Team" /></a><a
-                                            href="https://lighthouse.sigmaprime.io/"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                        ><p
                                             className="mt-5 text-center text-base font-semibold text-gray-500 tracking-tight"
                                         >
                                         Lighthouse ETH2 Client Team
