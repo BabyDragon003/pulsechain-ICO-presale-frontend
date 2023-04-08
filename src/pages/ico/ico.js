@@ -18,6 +18,27 @@ export default function IcoPage() {
         roundNumber,
         currentTokenPrice,
         plsAmountFor1USD,
+        nextRoundStartTime,
+        tokenBuyAmount,
+        projectTokenBalance,
+        payTokenBalance,
+        payTokenAllowance,
+        ethBalance,
+    } = useContractStatus(refresh)
+
+    return (
+        <div
+            className=""
+            id="header"
+        >
+            <div className="bg-header relative overflow-hidden">
+                <div className="bg-fx"></div>
+                <div className="rocket"></div>
+                <div className="trail"></div>
+                <div className="bg-clouds-top"></div>
+                <div className="relative overflow-hidden">
+                    <div className="relative pt-6 pb-5 sm:pb-10">
+                        <div className="mt-5 mx-auto max-w-7xl lg:px-4 px-1">
                             <div className="flex flex-row justify-items-center lg:justify-between gap-3">
                                 <div className="flex lg:flex-row lg:justify-items-right lg:gap-2">
                                     <img alt="img"
