@@ -3,6 +3,12 @@ import BuyItem from "./BuyItem";
 import { useEffect, useState } from "react";
 import { displayRemainTime, ICO_BEFORE, ICO_NOW, ICO_AFTER } from "../utils/utils";
 
+export default function BuyCard(props) {
+    const [icoStatus, setIcoStatus] = useState(ICO_NOW)
+    const [icoStatusTitle, setIcoStatusTitle] = useState(``)
+    const [icoStatusDetail, setIcoStatusDetail] = useState(``)
+
+    useEffect(() => {
         if (props.totalSoldAmount >= global.totalVolume) setIcoStatus(ICO_AFTER)
         else if (props.roundNumber < 1) setIcoStatus(ICO_BEFORE)
         else if (props.roundNumber < 25) setIcoStatus(ICO_NOW)

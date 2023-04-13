@@ -3,6 +3,12 @@ export default function HowItWorks() {
         <div className="py-20 bg-white" id="how-it-works">
             <div className="p-2 md:p-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="lg:text-center">
+                    <h2
+                        className="py-2 text-center text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-red-500 via-yellow-400 to-red-400 bg-clip-text text-transparent leading-8"
+                    >
+                        How does Rocket Pool work?
+                    </h2>
+                    <p
                         className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto font-semibold"
                     >
                         Rocket Pool is the first truly decentralised Ethereum staking

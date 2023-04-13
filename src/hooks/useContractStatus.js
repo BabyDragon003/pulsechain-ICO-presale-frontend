@@ -3,6 +3,12 @@ import ContractABI from "../assets/abi/ico.json"
 import { useAccount } from "wagmi";
 import { multicall, fetchBalance } from '@wagmi/core'
 import { global } from "../config/global";
+import { formatUnits } from "viem";
+
+export function useContractStatus(refresh) {
+    const [data, setData] = useState({
+        totalSoldAmount: 0,
+        totalFundsInUSD: 0,
         roundNumber: 0,
         currentTokenPrice: 0,
         plsAmountFor1USD: 0,
